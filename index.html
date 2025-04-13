@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SMB - Reminiscence Game (Chris)</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	<p id="vidas">x0</p>
+	<div>
+		<h2>SMB - Reminiscence Game</h2>
+	</div>
+
+	<div id="tablero">
+		<!-- Cards are dynamically generated here -->
+	</div>
+
+	<div id="area">
+		<div id="area1">
+			<!--User Score -->
+			<p>Score</p>
+			<textarea rows="1" cols="20" id="result" disabled="disabled"></textarea>
+			
+			<!-- Mario's Coin Block -->
+			<div id="marioCoin" style="display: none;">
+				<p id="points">200</p>
+				<img id="coin" src="img/marioCoin.gif" alt="Mario Coin" >
+			</div>
+
+			<!-- Poisonous Mushroom Block -->
+			<div id="champiVenenoso" style="display: none;">
+				<p id="lostPoints">-200</p>
+				<img id="champi" src="img/champi_venenoso.png" alt="Champiñón Venenoso" >
+			</div>
+
+		</div>
+
+		<!-- Number of tries -->
+		<div id="area2">
+			<p>Tries</p>
+			<textarea rows="1" cols="20" id="try" disabled="disabled"></textarea>
+		</div>
+	</div>
+
+	
+	<!--Restart Button -->
+	<div id="area">
+		<div id="area1">
+			<input class = "boton-mario" id="boton" type="button" name="oper2" onclick="window.parent.location.reload()" value="Restart Game">
+		</div>
+	</div>
+
+	<!-- Game Script-->
+	<script src="scripts/script.js"></script>
+</body>
+</html>
